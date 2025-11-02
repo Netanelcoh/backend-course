@@ -10,7 +10,9 @@ export async function dedup(initialFiles: string[]) {
     for (let i = 0; i < initialFiles.length; i++) {
       await dedupAndWrite(initialFiles[i], resultFileName);
     }
-  } catch (error) {}
+  } catch (error) {
+    console.log(`Error: failed to dedup file`);
+  }
 }
 
 async function dedupAndWrite(input: string, output: string) {
@@ -35,6 +37,7 @@ async function dedupAndWrite(input: string, output: string) {
       outputWriteHandler.write(line + "\n");
     }
   } catch (error) {
+    console.log(`Error: failed to dedup ${input}`);
   } finally {
     outputWriteHandler?.close();
     inputReadHandler?.close();
