@@ -1,9 +1,9 @@
 import { INPUT_FILE } from "./consts";
-import { sliceFileToKOutputFiles } from "./chunk";
+import { partion } from "./partioning";
 import { dedup } from "./dedup";
 
 try {
-  const filesNames = await sliceFileToKOutputFiles(INPUT_FILE, 6);
+  const filesNames = await partion(INPUT_FILE);
   await dedup(filesNames ?? []);
   console.log("Finish");
 } catch (error) {
