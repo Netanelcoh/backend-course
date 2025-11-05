@@ -1,6 +1,6 @@
-import { INPUT_FILE } from "./consts";
-import { partion } from "./partioning";
-import { dedup } from "./dedup";
+import { INPUT_FILE } from "./consts.js";
+import { partion } from "./partioning.js";
+import { dedup } from "./dedup.js";
 
 try {
   const filesNames = await partion(INPUT_FILE);

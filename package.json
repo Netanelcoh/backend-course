@@ -2,10 +2,14 @@
   "name": "backend-course-ron",
   "version": "1.0.0",
   "description": "ttt",
-  "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:dedup": "npx tsc -p ./large-scale-dedup",
+    "build:primatly": "npx tsc -p ./large-scale-primality-test",
+    "start:dedup": "node ./large-scale-dedup/dist/task.js",
+    "start:primatly": "node ./large-scale-primality-test/dist/main.js",
+    "run:dedup": "npm run build:dedup && npm run start:dedup",
+    "run:primatly": "npm run build:primatly && npm run start:primatly"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // or ESNext
+    "module": "nodenext", // very important
+    "moduleResolution": "nodenext",
+    "esModuleInterop": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true
+  }
+}

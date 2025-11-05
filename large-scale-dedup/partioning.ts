@@ -1,8 +1,8 @@
 import * as fs from "fs";
 import * as readline from "readline";
-import { NUMBER_OF_BUCKETS, OUTPUT_FOLDER, SECRET_KEY } from "./consts";
+import { NUMBER_OF_BUCKETS, OUTPUT_FOLDER, SECRET_KEY } from "./consts.js";
 import path, { join } from "node:path";
-import { getBucket } from "./hash";
+import { getBucket } from "./hash.js";
 import { mkdir } from "node:fs/promises";
 
 export async function partion(inputFile: string) {

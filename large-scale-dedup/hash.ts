@@ -1,5 +1,5 @@
 import { createHmac } from "crypto";
-import { NUMBER_OF_BUCKETS, SECRET_KEY } from "./consts";
+import { NUMBER_OF_BUCKETS, SECRET_KEY } from "./consts.js";
 
 export function getBucket(line: string) {
   const hash = createHmac("sha256", SECRET_KEY).update(line).digest("hex");

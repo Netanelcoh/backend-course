@@ -1,7 +1,7 @@
 import * as fs from "node:fs";
 import * as readline from "node:readline";
 import * as path from "node:path";
-import { OUTPUT_FOLDER } from "./consts";
+import { OUTPUT_FOLDER } from "./consts.js";
 
 export async function dedup(initialFiles: string[]) {
   const resultFileName = path.join(OUTPUT_FOLDER, "final_result.txt");
